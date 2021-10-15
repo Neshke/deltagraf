@@ -1,6 +1,6 @@
 <template>
 <nav style="position:fixed">
-      <v-app-bar-nav-icon large color="grey--text" class="hidden-md-and-up" @click="drawer = !drawer" ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon large color="grey--text" class="hidden-lg-and-up" @click="drawer = !drawer" ></v-app-bar-nav-icon>
       <v-toolbar class="hidden-md-and-down"  flat  >
           <v-tabs align-with-title align="center">
           <v-tab height="100%" light>Tab 1</v-tab>
