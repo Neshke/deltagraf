@@ -62,9 +62,7 @@
               :elevation="hover ? 12 : 4"
               :class="{ 'on-hover': hover }"
             >
-              <v-img
-                height="225px"
-              >
+            
                 <v-card-title class="text-h6 black--text">
                   <v-row
                     class="fill-height flex-column"
@@ -81,27 +79,12 @@
                       <p class="text-caption font-weight-medium font-italic text-center">
                         Lorem ipsum dolor sit amet.
                       </p>
+                      <v-btn  class="green darken-4 white--text display-1 text-capitalize text-center" height="80px" >Prodavnica</v-btn>
                     </div>
 
-                    <div class="align-self-center">
-                      <v-btn
-                        v-for="(icon, index) in icons"
-                        :key="index"
-                        :class="{ 'show-btns': hover }"
-                        :color="transparent"
-                        icon
-                      >
-                        <v-icon
-                          :class="{ 'show-btns': hover }"
-                          :color="transparent"
-                        >
-                          {{ icon }}
-                        </v-icon>
-                      </v-btn>
-                    </div>
+                    
                   </v-row>
                 </v-card-title>
-              </v-img>
             </v-card>
           </v-hover>
         </v-col>
@@ -116,8 +99,6 @@ import hem from "../assets/hem.jpg"
 
   export default {
     data: () => ({
-      images:[
-      ],
       icons: ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'],
       items: [
         {
@@ -140,7 +121,7 @@ import hem from "../assets/hem.jpg"
 
 <style scoped>
 #home{
-    padding:100px;
+    padding:50px;
 }
 .v-card {
   transition: opacity .4s ease-in-out;

@@ -1,26 +1,30 @@
 <template>
 <div id="site" >
-  <v-banner sticky height="70px" color="#010600" class="hidden-lg-and-up">
-    <navbar class="hidden-lg-and-up" v-on:scroll-down="scrollToElement($event)"/>
+  <v-banner sticky height="70px" color="#010600" class="hidden-lg-and-up" style="z-index=2">
+    <navbar class="hidden-lg-and-up"/>
   </v-banner>
   <div style="background-color:#000a02;" class="home-logo"></div>
-  <v-banner sticky color="#010600" class="hidden-md-and-down">
+  <v-banner sticky color="#010600" class="hidden-md-and-down" style="z-index=2">
     <navbar v-on:scroll-down="scrollToElement($event)"/>
   </v-banner>
-  <v-sheet :min-height="$vuetify.breakpoint.xs ? 300 : '1vh'" :rounded="$vuetify.breakpoint.xsOnly" color="#da996f" />
+  <v-sheet height="50px" :rounded="$vuetify.breakpoint.xsOnly" color="#da996f"  style="padding-top:97px" id="home-div"/>
   <h1 class="mt-8 display-3 text-center">Kancelarijski materijal</h1>
-  <Home/>
-  <v-sheet :min-height="$vuetify.breakpoint.xs ? 300 : '1vh'" :rounded="$vuetify.breakpoint.xsOnly" color="#da996f" />
-  <div style="height:300px;background-color:#010600">
-    <About/>
+  <Home />
+  <v-sheet height="50px" :rounded="$vuetify.breakpoint.xsOnly" color="#da996f" id="offers-div" style="padding-top:97px" />
+  
+  <div style="background-color:#010600;height:1500px;">
+    <Offers />
+    <v-sheet  class="mt-2 " color="#da996f" id="about-div" style="padding-top:97px;" />  
+    <About />
   </div>
-  <div style="height:700px;background-color:#010600"></div>
+    
 </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
 import Home from '../components/Home.vue'
+import Offers from '../components/Offers.vue'
 import About from '../components/About.vue'
 
   export default {
@@ -28,31 +32,16 @@ import About from '../components/About.vue'
     components: {
       Navbar,
       Home,
+      Offers,
       About,
-    },
-    methods:{
-      scrollToElement:function(scroll){
-        let currentScroll = document.documentElement.scrollTop,
-        int = setInterval(frame, 0)
-          
-          
-          function frame(){
-              
-              if( scroll.scrollValue < currentScroll){
-                  clearInterval(int)
-              }else{
-                currentScroll = currentScroll + 7
-                  document.documentElement.scrollTop = currentScroll
-                
-              }
-          }
-      }
+      
     },
   }
         Navbar
 </script>
 <style scoped>
-
+#site{
+}
 .home-logo{
   background-image: url("../assets/logo-deltagraf.png");
   background-repeat: no-repeat;
