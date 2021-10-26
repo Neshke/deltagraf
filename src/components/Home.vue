@@ -1,5 +1,7 @@
 <template>
-<div id="home">
+<div id="home-div">
+  <div style="height:100px"/>
+  <h1 class="mt-8 display-3 text-center" >Dobrodošli</h1>
   <v-container class="pa-4 text-center">
     <v-row
       class="fill-height"
@@ -119,10 +121,7 @@ import hem from "../assets/hem.jpg"
   }
 </script>
 
-<style scoped>
-#home{
-    padding:50px;
-}
+<style>
 .v-card {
   transition: opacity .4s ease-in-out;
 }

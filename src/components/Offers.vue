@@ -1,6 +1,7 @@
 <template>
-<div id="offers">
-  <h1 class="display-2 white--text text-center pa-3">Ponuda</h1>
+<div id="offers-div">
+  <div style="height:100px" />
+  <h1 class="display-2 white--text text-center pa-3" >Ponuda</h1>
   <v-carousel v-model="model" style="z-index:0" class="mt-4"  >
     <v-carousel-item
       v-for="image in images"
@@ -44,3 +45,8 @@ import pozadina from "../assets/pozadina.jpg"
     }),
   }
 </script>
+<style scoped>
+#offers-div{
+  background-color:#010600;
+}
+</style>

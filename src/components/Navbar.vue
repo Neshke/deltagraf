@@ -41,33 +41,19 @@ export default {
         clickedButton:function(link){
             if(link.index==0){
                 const home = document.querySelector("#home-div")
-                home.scrollIntoView({
-                    top: 0,
-                    behavior: 'smooth',
-                })
+                home.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }else if(link.index==1){
                 const offer = document.querySelector("#offers-div")
-                offer.scrollIntoView({ 
-                    behavior: 'smooth',
-                })
+                offer.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }else if(link.index==2){    
                 const about = document.querySelector("#about-div")
-                about.scrollIntoView({
-                    top: 0,
-                    behavior: 'smooth',
-                })
+                about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }else if(link.index==3){    
-                const about = document.querySelector("#about-div")
-                about.scrollIntoView({
-                    top: 2000,
-                    behavior: 'smooth',
-                })
+                const about = document.querySelector("#abou")
+                about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }else{
-                const about = document.querySelector("#about-div")
-                about.scrollIntoView({
-                    top: 2000,
-                    behavior: 'smooth',
-                })
+                const about = document.querySelector("#abou")
+                about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }
         }
     },
