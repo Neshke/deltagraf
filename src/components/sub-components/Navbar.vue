@@ -49,8 +49,8 @@ export default {
                 const about = document.querySelector("#about-div")
                 about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }else if(link.index==3){    
-                const about = document.querySelector("#abou")
-                about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
+                const ref = document.querySelector("#references-div")
+                ref.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
             }else{
                 const about = document.querySelector("#abou")
                 about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})

@@ -1,15 +1,21 @@
 <template>
 <div id="offers-div">
   <div style="height:100px" />
-  <h1 class="display-2 white--text text-center pa-3" >Ponuda</h1>
-  <v-carousel v-model="model" style="z-index:0" class="mt-4"  >
+  <h1 class="display-3 white--text text-center pa-3 pb-12" >Ponuda</h1>
+  <v-carousel
+    v-model="model"
+    style="z-index:0;"
+    class="mt-4 black"
+    continuous
+    cycle
+    interval="2500"
+    hide-delimiters
+    height="66vh">
     <v-carousel-item
       v-for="image in images"
       :key="image"
-      
     >
       <v-sheet
-        :color="color"
         height="100%"
         tile
         rounded-lg
@@ -20,8 +26,8 @@
           justify="center"
           style="border-radius: 1em"
         >
-          <div class="text-h2" >
-            <v-img :src="image" height="500" ></v-img>
+          <div class="text-h2 col-sm" style="object-fit:cover" >
+            <v-img :src="image" height="66vh" ></v-img>
           </div>
         </v-row>
       </v-sheet>
