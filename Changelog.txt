@@ -1,0 +1,21 @@
+## [Unreleased]
+
+## [1.0.0] - 11/08/2021
+## Added
+- Added Animation on Scroll plugin for better animations.
+- Added animations to :
+    *About,
+    *Home.
+- Animations temporary, need adjustments.
+- Home: Added text that is demanded. Needs adjustments...
+- Offers: Adjusted v-carousel for options: added cycle, interval.
+- Created PageLoader for loading, when components are being loaded on first time start.
+- Created References component. 
+- References: Added v-slide-group. Needs adjustments...
+
+## Fixed
+- Home: Fix height of div.
+- Offers: Fix height of div and image.
+
+## Changed
+- Navbar and PageLoader are now sub-components and are added to sub-components folder.
