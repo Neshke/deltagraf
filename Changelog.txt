@@ -19,3 +19,17 @@
 
 ## Changed
 - Navbar and PageLoader are now sub-components and are added to sub-components folder.
+
+## [1.0.1] - 11/09/2021
+## Added
+- References: Added pictures as references to the page, each photo has alt and link to the webpage of the reference.
+
+## Fixed
+- Fix js code in multiple methods to remove console warnings, and to ensure safe functionalities
+## Changed
+- Home: Changed v-card colors,
+        Adjusted text.
+
+- About: Moved v-slide-group from References. Added v-for for each individual element,
+         Changed Picture,
+         Added text.
