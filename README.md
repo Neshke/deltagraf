@@ -19,6 +19,10 @@ npm run build
 ```
 npm run lint
 ```
+### Changelog
+```
+Check changelog for any updates on project
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
