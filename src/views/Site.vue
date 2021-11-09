@@ -39,7 +39,8 @@
     <v-sheet height="10px" color="#da996f"/> 
       <About />
     <v-sheet height="10px" color="#da996f"/> 
-      <references />
+      <References />
+      <v-sheet height="10px" color="#da996f"/> 
       
   </div>
 </template>

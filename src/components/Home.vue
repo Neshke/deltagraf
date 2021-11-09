@@ -5,20 +5,23 @@
   <v-container class="pa-4 text-center">
     <v-row class="fill-height" align="center" justify="center">
         <v-col cols="12">
-            <v-card  data-aos="slide-right" data-aos-easing="ease-in-sine" data-aos-delay="150">
-                <v-card-title class="text-h6 black--text">
+            <v-card  data-aos="slide-right" data-aos-easing="ease-in-sine" data-aos-delay="150" color="#010600">
+                <v-card-title class="text-h6 white--text" >
                   <v-row class="fill-height flex-column" justify="space-between">
 
                     <div>
-                      <p class="ma-0 pa-12  title text-center">
-                        Deltagraf” firma je osovana 1992. godine i uspešno posluje već duži niz godina kako sa državnim firmama, tako i sa privatnim. Kroz sve ove godine smo se držali kvaliteta, što se može videti kod naših kupaca svakoga dana. Ova firma je započeta kao porodična firma, ali kroz godine se polako širila. Naš cilj je proširenje prodaje kvalitetnih artikla po povoljnim cenama u celoj Srbiji, a kasnije i šire.
-                      </p>
+                        <p class="ma-0 pt-13 pl-13 pr-13  title text-center">
+                          Dobrodošli na Deltagraf d.o.o. veb portal. Kod nas možete pronaći sve od kancelariskog materijala i sredstava za higijenu koji su potrebni vašoj kompaniji. Možete poručivati robu telefonom, e-mailom ili doći lično u naše prostorije, mi ćemo vam uvek izaći u susret. U ponudi imamo preko 5.000 artikala i sigurni smo da imamo sve što vam je potrebno.
+                        </p>
+                        <p class="ma-0 pb-13 pt-2  title text-center">
+                         Nemate vremena ili niste blizu, pozovite nas mi ćemo naći način da roba dođe do vas.
+                        </p>
                       <div class="row">
                         <div class="col-sm">
                           <p class="ma-0 pb-6  subtitle-1 text-center">
                             Uskoro...
                           </p>
-                          <p class="ma-0 pb-6  display-4 text-center">
+                          <p class="ma-0 pb-6  display-4 text-center amber--text">
                             30
                           </p>
                           <p class="ma-0 pb-6  subtitle-1 text-center">
@@ -29,18 +32,18 @@
                           <p class="ma-0 pb-6  subtitle-1 text-center">
                             ...Sa preko...
                           </p>
-                          <p class="ma-0 pb-6  display-4 text-center">
+                          <p class="ma-0 pb-6  display-4 text-center amber--text">
                             500
                           </p>
                           <p class="ma-0 pb-6  subtitle-1 text-center">
-                            ...Firmi, opština, naselja...
+                            ...Zadovoljnih klijenata...
                           </p>
                         </div>
                         <div class="col-sm">
                           <p class="ma-0 pb-6  subtitle-1 text-center">
                             Uskoro...
                           </p>
-                          <p class="ma-0 pb-6  display-4 text-center">
+                          <p class="ma-0 pb-6  display-4 text-center amber--text">
                             30
                           </p>
                           <p class="ma-0 pb-6  subtitle-1 text-center">
@@ -68,24 +71,22 @@
           data-aos="fade-up" data-aos-delay="150 + i * 100"
         >
             <v-card
-              color="transparent"
+              color="#010600"
+              height="35vh"
+              class="pa-4"
             >
-              <v-img
-                :src="item.img"
-                height="225px"
-              >
-                <v-card-title class="text-h6 white--text">
+                <v-card-title class="text-h7 white--text">
                   <v-row
                     class="fill-height flex-column"
                     justify="space-between"
                     
                   >
-                    <p class="mt-4 subheading text-center black--text">
+                    <p class="mt-4 subheading text-center amber--text">
                       {{ item.title }}
                     </p>
                     <br>
                     <div>
-                      <p class="text-title-1 font-weight-bold text-center black--text">
+                      <p class="text-subtitle-1 font-weight-bold text-center white--text">
                         {{ item.subtext }}
                       </p>
                     </div>
@@ -93,7 +94,6 @@
                    
                   </v-row>
                 </v-card-title>
-              </v-img>
             </v-card>
         </v-col>
       </template>
@@ -114,13 +114,13 @@ import hem from "../assets/hem.jpg"
         {
           title: 'Kancelarjiski materijal',
           text: `It's New Release Friday`,
-          subtext: 'Sve vrste kancelarijskom materijala, školskog pribora i reklamnog promo materijala sa uslugama štampe',
+          subtext: 'Imamo kompletna ponuda kancelarijskog materijala, školskog pribora, reklamnog i  promo materijala sa uslugom štampe.',
           img: km,
         },
         {
-          title: 'Kućna hemija',
+          title: 'Proizvodi za održavanje higijene',
           text: 'Greatest Rock Hits',
-          subtext: 'U prodaji imamo sve vrste kućne i industrijske hemije, domaće i inostrane proizvodje i papirne galanterije',
+          subtext: 'Imamo veliki izbor kućnih i industrijskih sredtava za održavanje higijene kako domaće tako i strane proizvodnje. U našoj ponudi možete pronaći i kompletnu ponudu papirne galanterije.',
           img: hem,
         },
       ],
