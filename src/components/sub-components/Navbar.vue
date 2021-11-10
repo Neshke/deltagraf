@@ -1,6 +1,6 @@
 <template>
     <nav >
-        <v-app-bar-nav-icon color="#da996f" class="hidden-lg-and-up" @click="drawer = !drawer" ></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon color="#da996f" class="hidden-lg-and-up" @click="drawer = !drawer" width="60" height="60" ></v-app-bar-nav-icon>
         <v-toolbar color="#010600" class="hidden-md-and-down"  flat  >
             <v-tabs centered slider-color="#da996f">
                 <v-tab class="white--text"  v-for="link in links" :key="link.text"  @click="clickedButton(link)" id="navLink">{{link.text}}</v-tab>

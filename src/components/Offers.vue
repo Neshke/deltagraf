@@ -1,6 +1,7 @@
 <template>
 <div id="offers-div">
-  <div style="height:100px" />
+  <div style="height:100px;background-color:#da996f" />
+  <v-sheet height="10px" color="#da996f" />
   <h1 class="display-3 white--text text-center pa-3 pb-12" >Ponuda</h1>
   <v-carousel
     v-model="model"

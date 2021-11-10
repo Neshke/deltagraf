@@ -1,19 +1,20 @@
 <template>
 <div id="home-div">
-  <div style="height:100px"/>
+  <div style="height:100px; background-color:#da996f"/>
+  <v-sheet height="10px" color="#da996f"/>
   <h1 class="mb-8 mt-16 display-3 text-center" data-aos="fade-down" data-aos-delay="150">Dobrodošli</h1>
   <v-container class="pa-4 text-center">
     <v-row class="fill-height" align="center" justify="center">
         <v-col cols="12">
             <v-card  data-aos="slide-right" data-aos-easing="ease-in-sine" data-aos-delay="150" color="#010600">
-                <v-card-title class="text-h6 white--text" >
+                <v-card-title class=" white--text" >
                   <v-row class="fill-height flex-column" justify="space-between">
 
                     <div>
-                        <p class="ma-0 pt-13 pl-13 pr-13  title text-center">
+                        <p class="ma-0 pt-13 pl-13 pr-13  font-weight-light text-center text-justify " style="word-break: break-word;">
                           Dobrodošli na Deltagraf d.o.o. veb portal. Kod nas možete pronaći sve od kancelariskog materijala i sredstava za higijenu koji su potrebni vašoj kompaniji. Možete poručivati robu telefonom, e-mailom ili doći lično u naše prostorije, mi ćemo vam uvek izaći u susret. U ponudi imamo preko 5.000 artikala i sigurni smo da imamo sve što vam je potrebno.
                         </p>
-                        <p class="ma-0 pb-13 pt-2  title text-center">
+                        <p class="ma-0 pt-2 pl-13 pr-13 font-weight-light title text-center " style="word-break: break-word;">
                          Nemate vremena ili niste blizu, pozovite nas mi ćemo naći način da roba dođe do vas.
                         </p>
                       <div class="row">
@@ -21,7 +22,7 @@
                           <p class="ma-0 pb-6  subtitle-1 text-center">
                             Uskoro...
                           </p>
-                          <p class="ma-0 pb-6  display-4 text-center amber--text">
+                          <p class="ma-0 pb-6  display-4 text-center text-color" >
                             30
                           </p>
                           <p class="ma-0 pb-6  subtitle-1 text-center">
@@ -32,22 +33,11 @@
                           <p class="ma-0 pb-6  subtitle-1 text-center">
                             ...Sa preko...
                           </p>
-                          <p class="ma-0 pb-6  display-4 text-center amber--text">
+                          <p class="ma-0 pb-6  display-4 text-center text-color">
                             500
                           </p>
                           <p class="ma-0 pb-6  subtitle-1 text-center">
                             ...Zadovoljnih klijenata...
-                          </p>
-                        </div>
-                        <div class="col-sm">
-                          <p class="ma-0 pb-6  subtitle-1 text-center">
-                            Uskoro...
-                          </p>
-                          <p class="ma-0 pb-6  display-4 text-center amber--text">
-                            30
-                          </p>
-                          <p class="ma-0 pb-6  subtitle-1 text-center">
-                            ...Godina poslovanja
                           </p>
                         </div>
                       </div>
@@ -75,18 +65,18 @@
               height="35vh"
               class="pa-4"
             >
-                <v-card-title class="text-h7 white--text">
+                <v-card-title class="text-h6 white--text">
                   <v-row
                     class="fill-height flex-column"
                     justify="space-between"
                     
                   >
-                    <p class="mt-4 subheading text-center amber--text">
+                    <p class="mt-4 text-center text-color">
                       {{ item.title }}
                     </p>
                     <br>
                     <div>
-                      <p class="text-subtitle-1 font-weight-bold text-center white--text">
+                      <p class="text-subtitle-1 font-weight-normal text-center white--text" style="word-break: break-word;">
                         {{ item.subtext }}
                       </p>
                     </div>
@@ -114,7 +104,7 @@ import hem from "../assets/hem.jpg"
         {
           title: 'Kancelarjiski materijal',
           text: `It's New Release Friday`,
-          subtext: 'Imamo kompletna ponuda kancelarijskog materijala, školskog pribora, reklamnog i  promo materijala sa uslugom štampe.',
+          subtext: 'Imamo kompletnu ponudu kancelarijskog materijala, školskog pribora, reklamnog i  promo materijala sa uslugom štampe.',
           img: km,
         },
         {
@@ -129,8 +119,14 @@ import hem from "../assets/hem.jpg"
   }
 </script>
 
-<style>
+<style scoped>
 #home-div{
+}
+.text-color{
+  color:#da996f;
+}
+.text-color{
+  color:#da996f;
 }
 .v-row{
   transition: opacity .4s ease-in-out;

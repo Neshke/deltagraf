@@ -1,7 +1,9 @@
 <template>
   <div id="references-div" >
-    <div style="height:100px"/>
-    <h1 class="display-3 black--text text-center pa-3 pb-12" >Reference</h1>
+    <div style="height:100px;background-color:#da996f"/>
+    <h1 class="display-3 black--text text-center pa-3 pb-12" >
+      <div data-aos="slide-down" data-aos-delay="300"><div data-aos="fade-down" data-aos-delay="300">Reference</div></div>
+      </h1>
       
         <v-container >
           <v-row width="600">

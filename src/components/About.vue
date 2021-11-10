@@ -1,17 +1,17 @@
 <template>
   <div id="about-div" >
-    <div data-aos="slide-right" data-aos-delay="300">
-    <div style="height:100px"/>
+    <div style="height:100px;background-color:#da996f"/>
+    <v-sheet height="10px" color="#da996f"/> 
       <v-container class="lighten-5" style="background-color:transparent">
-          <h1 class="display-3 white--text text-center pa-3">O nama</h1>
+          <h1 class="display-3 white--text text-center pa-3" data-aos="slide-down" data-aos-delay="300">O nama</h1>
         <v-row no-gutters height="200" class="black--text pa-4 fill-height" align="center" justify="center">
             <v-col :key="n" cols="12" sm="6">
-               <v-img :src="slika" eager  class=" black ma-4  rounded-lg"/>
+               <v-img :src="slika" eager  class=" black ma-4  rounded-lg" data-aos="slide-right" data-aos-delay="350"/>
             </v-col>
             <v-col :key="n" cols="12" sm="6">
               <v-card class="ma-2 rounded-lg white--text text-center" color="#010600" outlined tile  >
-                <v-card-text class="text-left white--text text-subtitle-2" >
-                  Deltagraf je osnovan 1992. godine sa jasnom vizijom osnivača Vladana Nikolića da je samo kvalitetna ponuda i vrhunska usluga garancija uspeha. Svoj rad smo započeli snabdevanjem poslovnih korisnika kancelarijskim materijalom a kasnije smo ponudu proširili i na hemijske proizvode za održavanje higijene . Za sve ove godine smo izgradili, pored renomea koji nosi samo ime naše kompanije, i poslovni proctor u centru Smedereva sa 100m2 kancelarijskog prostora i 300m2 magacinskog prostora.  Naša težnja je da budemo vaši partneri a ne samo dobavljači, kao dokaz tome je i veliki broj kompanija koji godinama sarađuju sa nama. Stalnim ulaganjem u kadrove i proširenje kapaciteta činimo da kvalitet naše ponude i pružene usluge neprestano raste. 
+                <v-card-text class="text-left white--text text-body-1 text-justify" style="word-break: break-word;" data-aos="slide-left" data-aos-delay="400">
+                 &nbsp;&nbsp;&nbsp;&nbsp;Deltagraf je osnovan 1992. godine sa jasnom vizijom osnivača Vladana Nikolića da je samo kvalitetna ponuda i vrhunska usluga garancija uspeha. Svoj rad smo započeli snabdevanjem poslovnih korisnika kancelarijskim materijalom a kasnije smo ponudu proširili i na hemijske proizvode za održavanje higijene . Za sve ove godine smo izgradili, pored renomea koji nosi samo ime naše kompanije, i poslovni proctor u centru Smedereva sa 100m2 kancelarijskog prostora i 300m2 magacinskog prostora.  Naša težnja je da budemo vaši partneri a ne samo dobavljači, kao dokaz tome je i veliki broj kompanija koji godinama sarađuju sa nama. Stalnim ulaganjem u kadrove i proširenje kapaciteta činimo da kvalitet naše ponude i pružene usluge neprestano raste. 
                 </v-card-text>
               </v-card>
             </v-col>
@@ -32,8 +32,6 @@
           </v-sheet>
         </template>
     </v-container>
-    
-    </div>
   </div>
 
 </template>

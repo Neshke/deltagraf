@@ -1,17 +1,16 @@
 <template>
   <div id="site" >
     <PageLoader/>
-      <v-banner sticky height="70px" color="#010600" class="hidden-lg-and-up" style="z-index=100;">
+      <v-banner sticky height="101px" color="#010600" class="hidden-lg-and-up " style="z-index=100;" hide-details>
       <navbar class="hidden-lg-and-up"/>
       <v-btn
-            class="amber--text title text-capitalize ml-8 prodavnica-button"
-            height="60px"
+            class="title text-capitalize ml-8 prodavnica-button text-color"
+            height="80px"
             width="150px"
             color="transparent"
             style="">
             Prodavnica
-          </v-btn>
-          
+          </v-btn> 
     </v-banner>
     <div class="home-logo-color" >
       <div class="home-logo " id="monster" >
@@ -19,7 +18,7 @@
         align="center"
         justify="center">
           <v-btn
-            class="amber--text title text-capitalize ml-8 hidden-md-and-down"
+            class="text-color title text-capitalize ml-8 hidden-md-and-down"
             height="60px"
             width="150px"
             color="#010e03"
@@ -34,9 +33,7 @@
     </v-banner>
     <v-sheet height="10px" color="#da996f"/>
       <Home />
-    <v-sheet height="10px" color="#da996f" />
       <Offers />
-    <v-sheet height="10px" color="#da996f"/> 
       <About />
     <v-sheet height="10px" color="#da996f"/> 
       <References />
@@ -70,6 +67,9 @@ import References from '../components/References.vue'
 <style scoped>
 #site{
 }
+.text-color{
+  color:#da996f;
+}
 .home-logo{
   background-image: url("../assets/logo-deltagraf-mobile-1.png");
   background-repeat: no-repeat;
@@ -101,13 +101,13 @@ left:100px;
 @media screen and (min-width: 480px) {
 .home-logo {
   background-image: url("../assets/logo-deltagraf.png");
-  height:90.5vh;
+  height:90vh;
   background-size:contain;
   animation: fadeInAnimation ease 5s;
   }
 .home-logo-color{
   background: linear-gradient(#020902 15%, #010e03, #020902 90%);
-  height:90.5vh;
+  height:90vh;
 }  
 }
 @keyframes fadeInAnimation {
