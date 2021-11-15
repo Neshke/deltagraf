@@ -1,12 +1,12 @@
 <template>
-  <div id="references-div" >
-    <div style="height:100px;background-color:#da996f"/>
+  <div id="references-div"  >
+    <div style="height:110px;background-color:#da996f"/>
     <h1 class="display-3 black--text text-center pa-3 pb-12" >
       <div data-aos="slide-down" data-aos-delay="300"><div data-aos="fade-down" data-aos-delay="300">Reference</div></div>
       </h1>
       
-        <v-container >
-          <v-row width="600">
+        <v-container>
+          <v-row width="600" class="pb-8">
             <template v-for="n in logos">
               <v-col
               :key="n"
@@ -18,7 +18,8 @@
                   :src="n.img"
                   :title="n.alt"
                   eager
-                  contain>
+                  contain
+                  >
                   </v-img>
               </a>
               </v-col>
@@ -33,7 +34,7 @@
 
 import n1 from "../assets/references-logo/n1.png"
 import n2 from "../assets/references-logo/n2.png"
-import n3 from "../assets/references-logo/n3.png"
+import n3 from "../assets/references-logo/n3.jpg"
 import n4 from "../assets/references-logo/n4.png"
 import n5 from "../assets/references-logo/n5.png"
 import n6 from "../assets/references-logo/n6.png"
@@ -43,7 +44,7 @@ import n9 from "../assets/references-logo/n9.png"
 import n10 from "../assets/references-logo/n10.png"
 import n11 from "../assets/references-logo/n11.png"
 import n12 from "../assets/references-logo/n12.png"
-import n13 from "../assets/references-logo/n13.jpg"
+import n13 from "../assets/references-logo/n13.png"
 import n14 from "../assets/references-logo/n14.png"
 import n15 from "../assets/references-logo/n15.jpg"
 import n16 from "../assets/references-logo/n16.png"
@@ -150,10 +151,16 @@ export default {
   }
 </script>
 
-<style>
+<style scoped>
 #references-div{
     overflow-x:hidden;
     background-color: white;
-    height: 800px;
+}
+@media screen and (min-width: 480px) {
+  #references-div{
+    overflow-x:hidden;
+    background-color: white;
+    height:99vh;
+  }
 }
 </style>

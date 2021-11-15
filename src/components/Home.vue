@@ -1,7 +1,6 @@
 <template>
 <div id="home-div">
-  <div style="height:100px; background-color:#da996f"/>
-  <v-sheet height="10px" color="#da996f"/>
+  <div style="height:110px; background-color:#da996f"/>
   <h1 class="mb-8 mt-16 display-3 text-center" data-aos="fade-down" data-aos-delay="150">Dobrodošli</h1>
   <v-container class="pa-4 text-center">
     <v-row class="fill-height" align="center" justify="center">
@@ -14,7 +13,7 @@
                         <p class="ma-0 pt-13 pl-13 pr-13  font-weight-light text-center text-justify " style="word-break: break-word;">
                           Dobrodošli na Deltagraf d.o.o. veb portal. Kod nas možete pronaći sve od kancelariskog materijala i sredstava za higijenu koji su potrebni vašoj kompaniji. Možete poručivati robu telefonom, e-mailom ili doći lično u naše prostorije, mi ćemo vam uvek izaći u susret. U ponudi imamo preko 5.000 artikala i sigurni smo da imamo sve što vam je potrebno.
                         </p>
-                        <p class="ma-0 pt-2 pl-13 pr-13 font-weight-light title text-center " style="word-break: break-word;">
+                        <p class="ma-0 pt-2 pl-13 pr-13 pa-10 font-weight-light title text-justify " style="word-break: break-word;">
                          Nemate vremena ili niste blizu, pozovite nas mi ćemo naći način da roba dođe do vas.
                         </p>
                       <div class="row">
@@ -58,7 +57,7 @@
           :key="i"
           cols="12"
           md="6"
-          data-aos="fade-up" data-aos-delay="150 + i * 100"
+          data-aos="fade-up" data-aos-delay="150"
         >
             <v-card
               color="#010600"

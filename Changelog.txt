@@ -33,3 +33,32 @@
 - About: Moved v-slide-group from References. Added v-for for each individual element,
          Changed Picture,
          Added text.
+
+## [1.1.0] - 11/15/2021
+## Added
+- Contact component
+- Added leaflet and vue2-leaflet plugin for OpenStreetMap integration.
+- Added Map sub-component:
+            - Added longitude and latitude
+            - Added marker
+            - Added tooltip with address info
+- Added button for scrolling to the top of the site, which is hidden until window scrolls down for more than 300px, and some styling for it.
+
+## Changed
+- About: Added animations for v-slide-group.
+- References: Switched positions of pictures for better alignment, where pictures with colored background go to corners on lg viewport.
+- Offers: Replaced old pictures with new original ones recieved from client.
+
+##Fixed
+- About: Fix for animations around h1 element. 
+- Home: Fix in <p> tag for beter text alignment and fixed animations.
+- Offers: Fix border radius and height of carousel specifically for lg viewport.
+- References: Fix height for lg viewport.
+- Sub-components/Map: Fixed scrolling issue when scrolling page, now it requires ctrl key to be pressed for zooming.
+- Navbar: Removed unnecessary code in methods for event-handling on click when user wants to navigate to specific page.
+
+##Removed
+- About: Removed v-sheet, unnecessary code.
+- Home: Removed v-sheet, unnecessary code.
+- Offers: Removed v-sheet, unnecessary code.
+- References: Removed v-sheet, unnecessary code.

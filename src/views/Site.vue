@@ -2,7 +2,7 @@
   <div id="site" >
     <PageLoader/>
       <v-banner sticky height="101px" color="#010600" class="hidden-lg-and-up " style="z-index=100;" hide-details>
-      <navbar class="hidden-lg-and-up"/>
+      <Navbar class="hidden-lg-and-up"/>
       <v-btn
             class="title text-capitalize ml-8 prodavnica-button text-color"
             height="80px"
@@ -13,7 +13,7 @@
           </v-btn> 
     </v-banner>
     <div class="home-logo-color" >
-      <div class="home-logo " id="monster" >
+      <div class="home-logo ">
         <v-row
         align="center"
         justify="center">
@@ -28,9 +28,12 @@
         </v-row>
       </div>
     </div>
-    <v-banner sticky height="100px" color="#010600" class="hidden-md-and-down" style="z-index=2">
-      <navbar />
+    <v-banner sticky height="100px" color="#010600" class="hidden-md-and-down nav-banner" >
+      <Navbar />
     </v-banner>
+    <template >
+    
+    </template>
     <v-sheet height="10px" color="#da996f"/>
       <Home />
       <Offers />
@@ -38,8 +41,12 @@
     <v-sheet height="10px" color="#da996f"/> 
       <References />
       <v-sheet height="10px" color="#da996f"/> 
-      
+      <Contact />
+      <div class="nav-arrow text-right" >
+          <v-btn fab class="mr-2 white--text" style="right:5vw"  color="#012903" v-if="scrollpx >= 300" @click="scrollToTop"><v-icon>arrow_upward</v-icon></v-btn>
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -49,6 +56,7 @@ import Offers from '../components/Offers.vue'
 import About from '../components/About.vue'
 import PageLoader from '../components/sub-components/PageLoader.vue'
 import References from '../components/References.vue'
+import Contact from '../components/Contact.vue'
 
 
   export default {
@@ -60,8 +68,30 @@ import References from '../components/References.vue'
       About,
       PageLoader,
       References,
+      Contact,
       
     },
+    data:()=>{
+      return{
+      showArrow: false,
+      scrollpx: 0
+      }
+    },
+    methods: {
+      handleScroll() {
+        this.scrollpx = window.scrollY;
+      },
+      scrollToTop(){
+        const div = document.querySelector('#site')
+        div.scrollIntoView({behavior: "smooth", block: "start", inline: "start"})
+      }
+    },
+    created() {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 </script>
 <style scoped>
@@ -86,7 +116,15 @@ position:fixed;
 top:5px;
 left:100px;
 }
-
+.nav-arrow{
+  position: fixed;
+  right:10px;
+  bottom: 20px;
+  z-index: 100;
+}
+.nav-banner{
+  z-index: 1;
+}
 .home-logo-color{
   background: linear-gradient(#020902 15%, #010e03, #020902 90%);
   height:92vh;
@@ -108,7 +146,7 @@ left:100px;
 .home-logo-color{
   background: linear-gradient(#020902 15%, #010e03, #020902 90%);
   height:90vh;
-}  
+  }
 }
 @keyframes fadeInAnimation {
             0% {
