@@ -62,3 +62,8 @@
 - Home: Removed v-sheet, unnecessary code.
 - Offers: Removed v-sheet, unnecessary code.
 - References: Removed v-sheet, unnecessary code.
+
+## [1.1.1] - 11/15/2021
+
+#Added
+-About: Added popup window. When user clicks on a certain certificate the popup becomes visible and the user can see the larger picture.
