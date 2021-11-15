@@ -100,10 +100,6 @@
                 </form>
             </v-container>
         </div>
-        <div style="height:400px">
-
-        </div>
-        
     </div>
 </template>
 

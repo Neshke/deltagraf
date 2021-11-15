@@ -42,6 +42,7 @@
       <References />
       <v-sheet height="10px" color="#da996f"/> 
       <Contact />
+      <Footer />
       <div class="nav-arrow text-right" >
           <v-btn fab class="mr-2 white--text" style="right:5vw"  color="#012903" v-if="scrollpx >= 300" @click="scrollToTop"><v-icon>arrow_upward</v-icon></v-btn>
     </div>
@@ -57,6 +58,7 @@ import About from '../components/About.vue'
 import PageLoader from '../components/sub-components/PageLoader.vue'
 import References from '../components/References.vue'
 import Contact from '../components/Contact.vue'
+import Footer from '../components/Footer.vue'
 
 
   export default {
@@ -69,7 +71,7 @@ import Contact from '../components/Contact.vue'
       PageLoader,
       References,
       Contact,
-      
+      Footer,
     },
     data:()=>{
       return{

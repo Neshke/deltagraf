@@ -55,7 +55,7 @@
                                           dark
                                         >{{n.name}}</v-toolbar>
                                         <v-card-text>
-                                          <v-img :src="n.img" contain @click="togglePopup = !togglePopup" v-bind="attrs" v-on="on"></v-img>
+                                          <v-img :src="n.img" contain height="75vh" v-bind="attrs" v-on="on"></v-img>
                                         </v-card-text>
                                         <v-card-actions class="justify-end">
                                           <v-btn

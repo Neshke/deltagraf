@@ -7,20 +7,23 @@
       
         <v-container>
           <v-row width="600" class="pb-8">
-            <template v-for="n in logos">
+            <template v-for="(n,i) in logos">
               <v-col
-              :key="n"
+              :key="i"
               cols="12"
               lg="2">
               <a :href="n.src">
+                <div data-aos="fade-down" :data-aos-delay="150 + i * 50">
                 <v-img
                   height="10vh"
                   :src="n.img"
                   :title="n.alt"
                   eager
                   contain
+                  data-aos="slide-down" :data-aos-delay="300 + i * 50"
                   >
                   </v-img>
+                </div>
               </a>
               </v-col>
             </template>
