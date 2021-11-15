@@ -35,9 +35,39 @@
               <v-slide-group v-model="model" class="pa-4" show-arrows height="40vh" dark >
                   <v-slide-item v-for="n in sImages" :key="n" v-slot="{ toggle }">
                     <v-col>
-                      <v-card class="ma-4" height="30vh" width="26vw" @click="toggle" elevation="0" color="#010600">
-                            <v-img :src="n.img" height="100%" contain @click="togglePopup = !togglePopup"></v-img>
-                            <p class="ref-style">{{n.name}}</p>
+                      <v-card class="ma-4" height="30vh" width="20vw" @click="toggle" elevation="0" color="#010600">
+                            
+                            <v-row justify="space-around" height="500px">
+                                <v-col cols="auto">
+                                  <v-dialog
+                                    transition="dialog-top-transition"
+                                    max-width="600"
+                                    height="1000px"
+                                  >
+                                    <template v-slot:activator="{ on, attrs }">
+                                      <v-img :src="n.img" height="25vh" width="20vw" contain @click="togglePopup = !togglePopup" v-bind="attrs" v-on="on"></v-img>
+                                      <p class="ref-style">{{n.name}}</p>
+                                    </template>
+                                    <template v-slot:default="dialog">
+                                      <v-card>
+                                        <v-toolbar
+                                          color="#010600"
+                                          dark
+                                        >{{n.name}}</v-toolbar>
+                                        <v-card-text>
+                                          <v-img :src="n.img" contain @click="togglePopup = !togglePopup" v-bind="attrs" v-on="on"></v-img>
+                                        </v-card-text>
+                                        <v-card-actions class="justify-end">
+                                          <v-btn
+                                            text
+                                            @click="dialog.value = false"
+                                          >Zatvori</v-btn>
+                                        </v-card-actions>
+                                      </v-card>
+                                    </template>
+                                  </v-dialog>
+                                </v-col>
+                              </v-row>
                       </v-card>
                     </v-col>
                   </v-slide-item>
