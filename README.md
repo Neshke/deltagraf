@@ -1,4 +1,9 @@
-# deltagraf
+# Deltagraf
+
+## Temporary domain
+```
+https://lucid-feynman-7b346c.netlify.app
+```
 
 ## Project setup
 ```
