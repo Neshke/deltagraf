@@ -75,3 +75,25 @@
 
 #Removed
 - About view.
+
+## [1.2.1] - 12/06/2021
+
+#Added
+- Added axios for post requests when using from.
+- Added backend php script which uses the data sent through post request and sends it as a mail.
+- The data is sent as a array of variables containing values and the values are accessed by position where they are stored in the array.
+- There needs to be a backend server which is runnign simultaneously with the website server where is the php script stored.
+
+#Changed
+- Site: Replaced logo with the new one.
+- All-Components: Changed color to match the new logo.
+- Favico: Changed picture with logo picture.
+
+#Fix
+- Offers: fixed some styling and changed some pictures
+- References: fixed aos delay for foaster reaction time of animations and better loading.
+- public/index.html: fixed link to favico so it is rendered properly when it is built for production.
+
+#Removed:
+- References: Removed a picture by user requests.
+- Site: Removed buttons in the navigation menu for sm and lg viewport.

@@ -1,6 +1,6 @@
 <template>
 <div id="home-div">
-  <div style="height:110px; background-color:#da996f"/>
+  <div style="height:110px; background-color:#ba9a31"/>
   <h1 class="mb-8 mt-16 display-3 text-center" data-aos="fade-down" data-aos-delay="150">Dobrodošli</h1>
   <v-container class="pa-4 text-center">
     <v-row class="fill-height" align="center" justify="center">
@@ -122,10 +122,10 @@ import hem from "../assets/hem.jpg"
 #home-div{
 }
 .text-color{
-  color:#da996f;
+  color:#ba9a31;
 }
 .text-color{
-  color:#da996f;
+  color:#ba9a31;
 }
 .v-row{
   transition: opacity .4s ease-in-out;

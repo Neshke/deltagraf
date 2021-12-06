@@ -7,8 +7,11 @@ import AOS from "aos";
 import "aos/dist/aos.css"
 import 'leaflet/dist/leaflet.css';
 import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
+Vue.use(VueAxios, axios)
 
 new Vue({
   created(){

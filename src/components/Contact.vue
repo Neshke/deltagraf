@@ -1,7 +1,7 @@
 <template>
     <div id="contact-div">
         
-        <div style="height:110px;background-color:#da996f"/>
+        <div style="height:110px;background-color:#ba9a31"/>
         <div data-aos="fade-down" data-aos-delay="300">
             <h1 class="display-3 white--text text-center pa-8" data-aos="slide-down" data-aos-delay="300">Kontakt</h1>
         </div>
@@ -13,7 +13,7 @@
                 <v-row class="pt-5 pb-3 white--text">
                   <v-col cols="12" lg="3" v-for="n in info" :key="n">
                     <v-row justify="center">
-                        <v-icon large color="#da996f">{{n.icon}}</v-icon>
+                        <v-icon large color="#ba9a31">{{n.icon}}</v-icon>
                     </v-row>
                     <v-row justify="center">
                       <h1  class="title">{{n.title}}</h1>
@@ -31,70 +31,73 @@
                     <v-text-field
                     v-model="firstName"
                     :error-messages="firstNameErrors"
-                    color="#da996f"
+                    color="#ba9a31"
                     label="Ime"
                     required
                     outlined
                     dark
+                    validate-on-blur
                     @input="$v.firstName.$touch()"
                     @blur="$v.firstName.$touch()"
-                    ></v-text-field>
+                    />
 
                     <v-text-field
                     v-model="lastName"
                     :error-messages="lastNameErrors"
-                    color="#da996f"
+                    color="#ba9a31"
                     label="Prezime"
                     required
                     outlined
                     dark
                     @input="$v.lastName.$touch()"
                     @blur="$v.lastName.$touch()"
-                    ></v-text-field>
+                    />
 
                     <v-text-field
                     v-model="email"
                     :error-messages="emailErrors"
                     label="E-pošta"
-                    color="#da996f"
+                    color="#ba9a31"
                     required
                     outlined
                     dark
                     @input="$v.email.$touch()"
                     @blur="$v.email.$touch()"
-                    ></v-text-field>
+                    />
 
                     <v-text-field
                     v-model="phone"
                     :error-messages="phoneErrors"
                     label="Phone"
-                    color="#da996f"
+                    color="#ba9a31"
                     required
                     outlined
                     dark
                     @input="$v.phone.$touch()"
                     @blur="$v.phone.$touch()"
-                    ></v-text-field>
+                    />
 
                     <v-textarea
                     v-model="desc"
                     label="Poruka"
-                    color="#da996f"
+                    color="#ba9a31"
                     required
                     outlined
                     dark
                     @input="$v.desc.$touch()"
                     @blur="$v.desc.$touch()"
-                    ></v-textarea>
+                    />
 
                     <v-btn
                     class="mr-4"
                     @click="submit"
-                    color="#da996f"
+                    color="#ba9a31"
+                    :disabled="$v.$anyError"
+                    dark
                     >
                     Pošalji
                     </v-btn>
-                    <v-btn @click="clear" color="#da996f">
+                    <v-btn @click="clear" color="#ba9a31">
                     Očisti polja
                     </v-btn>
                 </form>
@@ -107,6 +110,8 @@
 import Map from '../components/sub-components/Map.vue'
 import { validationMixin } from 'vuelidate'
 import { required, minLength, email,numeric } from 'vuelidate/lib/validators'
+
+
 export default {
     data: () => ({
       firstName: '',
@@ -114,6 +119,9 @@ export default {
       email: '',
       phone: '',
       desc:'',
+      validated: true,
+      sent: false,
+      form: [],
       info:[
         {
           icon: 'place',
@@ -181,8 +189,20 @@ export default {
     },
 
     methods: {
-      submit () {
-        this.$v.$touch()
+      submit (e) {
+        e.preventDefault()
+        this.form.push(this.firstName)
+        this.form.push(this.lastName)
+        this.form.push(this.email)
+        this.form.push(this.phone)
+        this.form.push(this.desc)
+
+        console.log(this.form[0])
+        this.axios.post(
+              "http://localhost/dist/about.php",
+              querystring.stringify(this.form)
+          )
+        this.clear()
       },
       clear () {
         this.$v.$reset()
@@ -191,6 +211,7 @@ export default {
         this.email = ''
         this.phone = ''
         this.desc = ''
+        this.form = []
       },
     },
 }
@@ -209,8 +230,8 @@ addEventListener("load", function() {
 .map{
     background-color:white;
     z-index:0;
-    border-bottom:2px solid #da996f;
-    border-top:2px solid #da996f;
+    border-bottom:2px solid #ba9a31;
+    border-top:2px solid #ba9a31;
 }
 .form{
   background-color:black;

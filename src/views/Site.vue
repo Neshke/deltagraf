@@ -3,28 +3,12 @@
     <PageLoader/>
       <v-banner sticky height="101px" color="#010600" class="hidden-lg-and-up " style="z-index=100;" hide-details>
       <Navbar class="hidden-lg-and-up"/>
-      <v-btn
-            class="title text-capitalize ml-8 prodavnica-button text-color"
-            height="80px"
-            width="150px"
-            color="transparent"
-            style="">
-            Prodavnica
-          </v-btn> 
     </v-banner>
     <div class="home-logo-color" >
       <div class="home-logo ">
         <v-row
         align="center"
         justify="center">
-          <v-btn
-            class="text-color title text-capitalize ml-8 hidden-md-and-down"
-            height="60px"
-            width="150px"
-            color="#010e03"
-            style="bottom:10px;position:absolute;bottom:20px">
-            Prodavnica
-          </v-btn>
         </v-row>
       </div>
     </div>
@@ -34,13 +18,13 @@
     <template >
     
     </template>
-    <v-sheet height="10px" color="#da996f"/>
+     
       <Home />
       <Offers />
       <About />
-    <v-sheet height="10px" color="#da996f"/> 
+    <v-sheet height="10px" color="#ba9a31"/> 
       <References />
-      <v-sheet height="10px" color="#da996f"/> 
+      <v-sheet height="10px" color="#ba9a31"/> 
       <Contact />
       <Footer />
       <div class="nav-arrow text-right" >
@@ -100,10 +84,10 @@ import Footer from '../components/Footer.vue'
 #site{
 }
 .text-color{
-  color:#da996f;
+  color:#ba9a31;
 }
 .home-logo{
-  background-image: url("../assets/logo-deltagraf-mobile-1.png");
+  background-image: url("../assets/logo-deltagraf-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -128,7 +112,7 @@ left:100px;
   z-index: 1;
 }
 .home-logo-color{
-  background: linear-gradient(#020902 15%, #010e03, #020902 90%);
+  background: linear-gradient(#000201 15%, #000201, #000201 90%);
   height:92vh;
 }
 
@@ -140,13 +124,13 @@ left:100px;
 
 @media screen and (min-width: 480px) {
 .home-logo {
-  background-image: url("../assets/logo-deltagraf.png");
+  background-image: url("../assets/logo-deltagraf.jpg");
   height:90vh;
   background-size:contain;
   animation: fadeInAnimation ease 5s;
   }
 .home-logo-color{
-  background: linear-gradient(#020902 15%, #010e03, #020902 90%);
+  background: linear-gradient(to left,#011206 15%, #000201, #000201 90%);
   height:90vh;
   }
 }

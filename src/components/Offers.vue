@@ -1,6 +1,6 @@
 <template>
 <div id="offers-div">
-  <div style="height:110px; background-color:#da996f" />
+  <div style="height:110px; background-color:#ba9a31" />
 
   <div data-aos="fade-down" data-aos-delay="300"><h1 class="display-3 white--text text-center pa-3 pb-12" data-aos="slide-down" data-aos-delay="300">Ponuda</h1></div>
 
@@ -8,18 +8,20 @@
     <v-carousel
       v-model="model"
       style="z-index:0;"
-      class="pt-12 white "
+      class="white "
       interval="2500"
       hide-delimiters
-      height="100%">
+      height="100%"
+      color="#c4c1c4">
       <v-carousel-item
         v-for="image in images"
         :key="image"
       >
         <v-sheet
-          height="500px"
           tile
           rounded-lg
+          color="#c4c1c4"
+          height="102%"
         >
           <v-row
             class="fill-height"
@@ -27,8 +29,7 @@
             justify="center"
           >
             <div class="text-h2 col-sm" style="object-fit:cover" >
-              <v-img :src="image.img" height="500px" contain ></v-img>
-              <v-container class="text-center display-1">{{image.desc}}</v-container>
+              <v-img :src="image.img" height="79vh" contain ></v-img>
             </div>
           </v-row>
         </v-sheet>
@@ -38,15 +39,17 @@
   </div>
 </template>
 <script>
-import n1 from "../assets/offers/n1.png"
+import n1 from "../assets/offers/n1.jpg"
 import n2 from "../assets/offers/n2.jpg"
 import n3 from "../assets/offers/n3.jpg"
 import n4 from "../assets/offers/n4.jpg"
 import n5 from "../assets/offers/n5.jpg"
-import n6 from "../assets/offers/n6.png"
+import n6 from "../assets/offers/n6.jpg"
 import n7 from "../assets/offers/n7.jpg"
 import n8 from "../assets/offers/n8.jpg"
 import n9 from "../assets/offers/n9.jpg"
+import n10 from "../assets/offers/n10.jpg"
+import n11 from "../assets/offers/n11.jpg"
 
   export default {
     data: () => ({
@@ -87,7 +90,15 @@ import n9 from "../assets/offers/n9.jpg"
         {
           img:n9,
           desc:'Folija za dokumenta U'
-        }
+        },
+        {
+          img:n10,
+          desc:'Folija za dokumenta U'
+        },
+        {
+          img:n11,
+          desc:'Folija za dokumenta U'
+        },
       ],
     }),
   }
@@ -103,7 +114,7 @@ import n9 from "../assets/offers/n9.jpg"
   }
 }
 .carousel{
-  border: 4px solid #da996f;
+  border: 4px solid #ba9a31;
   height: 80vh;
 }
 </style>

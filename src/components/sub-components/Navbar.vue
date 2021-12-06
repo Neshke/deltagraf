@@ -1,8 +1,8 @@
 <template>
     <nav style="z-index:1001" >
-        <v-app-bar-nav-icon color="#da996f" class="hidden-lg-and-up" @click="drawer = !drawer" width="60" height="60" ></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon color="#ba9a31" class="hidden-lg-and-up" @click="drawer = !drawer" width="60" height="60" ></v-app-bar-nav-icon>
         <v-toolbar color="#010600" class="hidden-md-and-down"  flat  >
-            <v-tabs centered slider-color="#da996f">
+            <v-tabs centered slider-color="#ba9a31">
                 <v-tab class="white--text"  v-for="link in links" :key="link.text"  @click="navigate(link)" id="navLink">{{link.text}}</v-tab>
             </v-tabs>
         </v-toolbar>
@@ -10,7 +10,7 @@
             <v-list>
                 <v-list-item v-for="link in links" :key="link.text" >
                     <v-list-item-action>
-                        <v-icon color="#da996f">{{link.icon}}</v-icon>
+                        <v-icon color="#ba9a31">{{link.icon}}</v-icon>
                     </v-list-item-action>
                     <v-list-item-content class="white--text">
                         <v-list-item-title class="item-title"  @click="navigate(link);drawer = !drawer">{{link.text}}</v-list-item-title>
@@ -53,6 +53,6 @@ export default {
     margin:0%;
 }
 .item-title:hover{
-    color:#da996f;
+    color:#ba9a31;
 }
 </style>

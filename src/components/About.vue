@@ -1,6 +1,6 @@
 <template>
   <div id="about-div" >
-    <div style="height:110px;background-color:#da996f"/>
+    <div style="height:110px;background-color:#ba9a31"/>
       <v-container class="lighten-5" style="background-color:transparent">
           <div
             data-aos="fade-down"
