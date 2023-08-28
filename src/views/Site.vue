@@ -2,14 +2,18 @@
   <div id="site" >
     <PageLoader/>
       <v-banner sticky height="101px" color="#010600" class="hidden-lg-and-up " style="z-index=100;" hide-details>
-      <Navbar class="hidden-lg-and-up"/>
+        <v-row>
+          <v-col>
+            <Navbar class="hidden-lg-and-up"/>
+          </v-col>
+          <v-col class="mt-3 ml-16">
+            <v-spacer></v-spacer>
+          </v-col>
+        </v-row>
     </v-banner>
     <div class="home-logo-color" >
       <div class="home-logo ">
-        <v-row
-        align="center"
-        justify="center">
-        </v-row>
+        
       </div>
     </div>
     <v-banner sticky height="100px" color="#010600" class="hidden-md-and-down nav-banner" >
@@ -39,10 +43,10 @@ import Navbar from '../components/sub-components/Navbar.vue'
 import Home from '../components/Home.vue'
 import Offers from '../components/Offers.vue'
 import About from '../components/About.vue'
-import PageLoader from '../components/sub-components/PageLoader.vue'
 import References from '../components/References.vue'
 import Contact from '../components/Contact.vue'
 import Footer from '../components/Footer.vue'
+import LocSw from '../components/sub-components/LocaleSwitcher.vue'
 
 
   export default {
@@ -52,10 +56,10 @@ import Footer from '../components/Footer.vue'
       Home,
       Offers,
       About,
-      PageLoader,
       References,
       Contact,
       Footer,
+      LocSw,
     },
     data:()=>{
       return{
@@ -92,8 +96,6 @@ import Footer from '../components/Footer.vue'
   background-position: center;
   background-size:cover;
   height:80%;
-  position: relative;
-  top:0px;
   animation: fadeInAnimation ease 5s;
 }
 .prodavnica-button {
@@ -113,7 +115,7 @@ left:100px;
 }
 .home-logo-color{
   background: linear-gradient(#000201 15%, #000201, #000201 90%);
-  height:92vh;
+  height:90vh;
 }
 
 .div-image{
@@ -126,11 +128,15 @@ left:100px;
 .home-logo {
   background-image: url("../assets/logo-deltagraf.jpg");
   height:90vh;
-  background-size:contain;
+  background-size:cover;
   animation: fadeInAnimation ease 5s;
-  }
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.9) inset;
+  width:70vw;
+  height: 90vh;
+  margin: auto;
+}
 .home-logo-color{
-  background: linear-gradient(to left,#011206 15%, #000201, #000201 90%);
+  background: rgba(0, 0, 0);
   height:90vh;
   }
 }

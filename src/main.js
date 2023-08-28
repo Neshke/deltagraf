@@ -9,15 +9,33 @@ import 'leaflet/dist/leaflet.css';
 import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueI18n from 'vue-i18n'
+import i18n from './i18n'
+
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
+Vue.use(VueI18n)
 
-new Vue({
-  created(){
-    AOS.init();
-  },
-  router,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+router.beforeEach((to, from, next) => {
+
+  // use the language from the routing param or default language
+  let language = to.params.lang;
+  if (!language) {
+    language = 'en'
+  }
+
+  // set the current language for i18n.
+  i18n.locale = language
+  next()
+})
+
+  new Vue({
+    created(){
+      AOS.init();
+    },
+    router,
+    vuetify,
+    i18n,
+    render: h => h(App)
+  }).$mount('#app')

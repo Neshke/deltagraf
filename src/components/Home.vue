@@ -1,7 +1,8 @@
 <template>
 <div id="home-div">
   <div style="height:110px; background-color:#ba9a31"/>
-  <h1 class="mb-8 mt-16 display-3 text-center" data-aos="fade-down" data-aos-delay="150">Dobrodošli</h1>
+  <h1 class="mb-8 mt-16 display-3 text-center" data-aos="fade-down" data-aos-delay="150">{{ $t('home.title')}}</h1>
+  
   <v-container class="pa-4 text-center">
     <v-row class="fill-height" align="center" justify="center">
         <v-col cols="12">
@@ -11,32 +12,21 @@
 
                     <div>
                         <p class="ma-0 pt-13 pl-13 pr-13  font-weight-light text-center text-justify " style="word-break: break-word;">
-                          Dobrodošli na Deltagraf d.o.o. veb portal. Kod nas možete pronaći sve od kancelariskog materijala i sredstava za higijenu koji su potrebni vašoj kompaniji. Možete poručivati robu telefonom, e-mailom ili doći lično u naše prostorije, mi ćemo vam uvek izaći u susret. U ponudi imamo preko 5.000 artikala i sigurni smo da imamo sve što vam je potrebno.
+                          {{$t('home.content1')}}
                         </p>
                         <p class="ma-0 pt-2 pl-13 pr-13 pa-10 font-weight-light title text-justify " style="word-break: break-word;">
-                         Nemate vremena ili niste blizu, pozovite nas mi ćemo naći način da roba dođe do vas.
+                          {{$t('home.content2')}}
                         </p>
                       <div class="row">
                         <div class="col-sm">
                           <p class="ma-0 pb-6  subtitle-1 text-center">
-                            Uskoro...
-                          </p>
-                          <p class="ma-0 pb-6  display-4 text-center text-color" >
-                            30
-                          </p>
-                          <p class="ma-0 pb-6  subtitle-1 text-center">
-                            ...Godina poslovanja
-                          </p>
-                        </div>
-                        <div class="col-sm">
-                          <p class="ma-0 pb-6  subtitle-1 text-center">
-                            ...Sa preko...
+                            {{$t('home.content5')}}
                           </p>
                           <p class="ma-0 pb-6  display-4 text-center text-color">
                             500
                           </p>
                           <p class="ma-0 pb-6  subtitle-1 text-center">
-                            ...Zadovoljnih klijenata...
+                            {{$t('home.content6')}}
                           </p>
                         </div>
                       </div>
@@ -71,12 +61,12 @@
                     
                   >
                     <p class="mt-4 text-center text-color">
-                      {{ item.title }}
+                      {{ $t(`home.${item.title}`) }}
                     </p>
                     <br>
                     <div>
                       <p class="text-subtitle-1 font-weight-normal text-center white--text" style="word-break: break-word;">
-                        {{ item.subtext }}
+                        {{ $t(`home.${item.subtext}`) }}
                       </p>
                     </div>
 
@@ -95,21 +85,21 @@
 <script>
 import km from "../assets/km.jpg"
 import hem from "../assets/hem.jpg"
+import i18n from '../i18n'
+
 
   export default {
     data: () => ({
       icons: ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'],
       items: [
         {
-          title: 'Kancelarjiski materijal',
-          text: `It's New Release Friday`,
-          subtext: 'Imamo kompletnu ponudu kancelarijskog materijala, školskog pribora, reklamnog i  promo materijala sa uslugom štampe.',
+          title: 'content7',
+          subtext: 'content8',
           img: km,
         },
         {
-          title: 'Proizvodi za održavanje higijene',
-          text: 'Greatest Rock Hits',
-          subtext: 'Imamo veliki izbor kućnih i industrijskih sredtava za održavanje higijene kako domaće tako i strane proizvodnje. U našoj ponudi možete pronaći i kompletnu ponudu papirne galanterije.',
+          title: 'content9',
+          subtext: 'content10',
           img: hem,
         },
       ],

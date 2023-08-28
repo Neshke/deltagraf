@@ -4,7 +4,7 @@
       <v-container class="lighten-5" style="background-color:transparent">
           <div
             data-aos="fade-down"
-            data-aos-delay="300"><h1 class="display-3 white--text text-center pa-3" data-aos="slide-down" data-aos-delay="300">O nama</h1></div>
+            data-aos-delay="300"><h1 class="display-3 white--text text-center pa-3" data-aos="slide-down" data-aos-delay="300">{{$t('about.title')}}</h1></div>
         <v-row no-gutters height="200" class="black--text pa-4 fill-height" align="center" justify="center">
             <v-col :key="n" cols="12" sm="6">
               <div
@@ -19,8 +19,7 @@
                 data-aos="fade-left"
                 data-aos-delay="300">
                   <v-card-text class="text-left white--text text-body-1 text-justify" style="word-break: break-word;" data-aos="slide-left" data-aos-delay="400">
-                   &nbsp;&nbsp;&nbsp;&nbsp;Deltagraf je osnovan 1992. godine sa jasnom vizijom osnivača Vladana Nikolića da je samo kvalitetna ponuda i vrhunska usluga garancija uspeha. Svoj rad smo započeli snabdevanjem poslovnih korisnika kancelarijskim materijalom a kasnije smo ponudu proširili i na hemijske proizvode za održavanje higijene . Za sve ove godine smo izgradili, pored renomea koji nosi samo ime naše kompanije, i poslovni prostor u centru Smedereva sa 100m2 kancelarijskog prostora i 300m2 magacinskog prostora.  Naša težnja je da budemo vaši partneri a ne samo dobavljači, kao dokaz tome je i veliki broj kompanija koji godinama sarađuju sa nama. Stalnim ulaganjem u kadrove i proširenje kapaciteta činimo da kvalitet naše ponude i pružene usluge neprestano raste. 
-                  </v-card-text>
+                   &nbsp;&nbsp;&nbsp;&nbsp;{{$t('about.content')}}</v-card-text>
                 </div>
               </v-card>
             </v-col>
@@ -29,7 +28,7 @@
           <div
           data-aos="fade-up"
           data-aos-delay="300">
-            <h1 class="display-3 white--text text-center mt-4 mb-4">Sertifikati</h1>
+            <h1 class="display-3 white--text text-center mt-4 mb-4">{{$t('about.subtitle')}}</h1>
 
             <v-sheet class="mx-0" max-width="100%" justify="center" height="45vh"  color="#010600" >
               <v-slide-group v-model="model" class="pa-4" show-arrows height="40vh" dark >
@@ -61,7 +60,7 @@
                                           <v-btn
                                             text
                                             @click="dialog.value = false"
-                                          >Zatvori</v-btn>
+                                          >{{$t('about.button')}}</v-btn>
                                         </v-card-actions>
                                       </v-card>
                                     </template>

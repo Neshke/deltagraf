@@ -1,0 +1,64 @@
+{
+    "nav": {
+      "title1": "HOME",
+      "title2": "OFFERS",
+      "title3": "ABOUT",
+      "title4": "REFERENCES",
+      "title5": "CONTACT"
+    },
+    "home": {
+      "title": "Welcome",
+      "content1": "Welcome to Deltagraf d.o.o. web portal. With us you can find everything from office supplies and hygiene products that your company needs. You can order by robust phone, e-mail or come in person to our premises, we will always meet your needs. We offer over 5,000 items and we are sure we have everything you need.",
+      "content2": "You don't have time or you are not near our store, call us and we will find a way for the goods to reach you.",
+      "content3": "Soon...",
+      "content4": "...Years of bussiness",
+      "content5": "...With over...",
+      "content6": "...Satisfied clients...",
+      "content7": "Office materials",
+      "content8": "We have a complete offer of office and school supplies, advertising and promotional materials with print service.",
+      "content9": "Hygiene products",
+      "content10": "We have a large selection of home and industrial hygiene products for both domestic and industrial production. Also we offer a complete range of paper accessories."
+    },
+    "offers":{
+      "title": "Offers"
+    },
+    "about":{
+      "title": "About us",
+      "content": "Deltagraf was founded in 1992 by Vladan Nikolić with a clear vision where only a quality offer and top service is a guarantee of success. We started our work by supplying business users with office supplies, and later we expanded our offer to include chemical products for maintaining hygiene. For all these years, we have built, in addition to the reputation that bears only the name of our company, and office space in the center of Smederevo with 100m2 of office space and 300m2 of warehouse space. Our aspiration is to be your partners and not just suppliers, as evidenced by the large number of companies that have been cooperating with us for years. By constantly investing in staff and expanding capacity, we make the quality of our offers and services provided constantly growing",
+      "subtitle": "Certificates",
+      "button": "Close"
+    },
+    "references":{
+      "title": "References"
+    },
+    "contact":{
+      "title": "Contact",
+      "info1": "Head office",
+      "info2": "Office",
+      "info3": "Contact info",
+      "info4": "Working hours",
+      "address1": "Beogradski put 29, \n11300 Smederevo, Srbija",
+      "address2": "Ante Protića 2, \n11300 Smederevo, Srbija",
+      "address3": "Email: info@deltagraf.rs\n Phone: 026/611-456",
+      "address4": "Mon-Sat\n 07:30 AM - 15:30 PM",
+      "form": "Contact form",
+      "formInfo": "For all your questions regarding our products and business, the sales team of Deltagraf D.O.O. is at your disposal. We will answer all your questions as soon as possible.",
+      "formFName": "First name",
+      "fNameError1": "First name is required",
+      "fNameError2": "Must have more than 3 letters",
+      "formLName": "Last name",
+      "lNameError1": "Last name is required",
+      "lNameError2": "Must have more than 3 letters",
+      "formEmail": "Email",
+      "emailError1": "Email is in incorrect format",
+      "emailError2": "Email is required",
+      "formPhone": "Phone",
+      "phoneError1": "Phone is in incorrect format",
+      "phoneError2": "Phone is required",
+      "phoneError3": "Phone must contain at least 9 digits",
+      "formMessage": "Message",
+      "button1": "Send",
+      "button2": "Clear fields",
+      "alert": "Message sent successfully!"
+    }
+  }

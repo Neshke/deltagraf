@@ -3,36 +3,36 @@
         
         <div style="height:110px;background-color:#ba9a31"/>
         <div data-aos="fade-down" data-aos-delay="300">
-            <h1 class="display-3 white--text text-center pa-8" data-aos="slide-down" data-aos-delay="300">Kontakt</h1>
+            <h1 class="display-3 white--text text-center pa-8" data-aos="slide-down" data-aos-delay="300">{{$t('contact.title')}}</h1>
         </div>
         <div class="map">
             <Map />
         </div>
         <div class="form text-center">
-            <v-container>
+            <v-container class="contact-header">
                 <v-row class="pt-5 pb-3 white--text">
                   <v-col cols="12" lg="3" v-for="n in info" :key="n">
                     <v-row justify="center">
                         <v-icon large color="#ba9a31">{{n.icon}}</v-icon>
                     </v-row>
                     <v-row justify="center">
-                      <h1  class="title">{{n.title}}</h1>
+                      <h1  class="title">{{ $t(`contact.${n.title}`) }}</h1>
                     </v-row>
                     <v-row justify="center">
-                      <p class="subtitle-1 sub-pre">{{n.subtitle}}</p>
+                      <p class="subtitle-1 sub-pre">{{ $t(`contact.${n.subtitle}`) }}</p>
                     </v-row>
                   </v-col>
                 </v-row>
             </v-container>
-            <h1 class="display-1 white--text text-center pa-8" >Kontakt forma</h1>
-            <p class=" pa-10 white--text text-center " style="word-break: break-word;">Za sva Vaša pitanja u vezi naših proizvoda i poslovanja na raspolaganju vam stoji prodajni tim kompanije Deltagraf D.O.O. Na sva vaša pitanja odgovorićemo u najkraćem roku.</p>
+            <h1 class="display-1 white--text text-center pa-8" >{{ $t(`contact.form`) }}</h1>
+            <p class=" pa-10 white--text text-center " style="word-break: break-word;">{{$t('contact.formInfo')}}</p>
         <v-container class="input-container text-center ">
                 <form>
                     <v-text-field
                     v-model="firstName"
                     :error-messages="firstNameErrors"
+                    :label="$t('contact.formFName')"
                     color="#ba9a31"
-                    label="Ime"
                     required
                     outlined
                     dark
@@ -45,18 +45,18 @@
                     v-model="lastName"
                     :error-messages="lastNameErrors"
                     color="#ba9a31"
-                    label="Prezime"
+                    :label="$t('contact.formLName')"
                     required
                     outlined
                     dark
                     @input="$v.lastName.$touch()"
                     @blur="$v.lastName.$touch()"
-                    />
+                    ></v-text-field>
 
                     <v-text-field
                     v-model="email"
                     :error-messages="emailErrors"
-                    label="E-pošta"
+                    :label="$t('contact.formEmail')"
                     color="#ba9a31"
                     required
                     outlined
@@ -68,7 +68,7 @@
                     <v-text-field
                     v-model="phone"
                     :error-messages="phoneErrors"
-                    label="Phone"
+                    :label="$t('contact.formPhone')"
                     color="#ba9a31"
                     required
                     outlined
@@ -79,7 +79,7 @@
 
                     <v-textarea
                     v-model="desc"
-                    label="Poruka"
+                    :label="$t('contact.formMessage')"
                     color="#ba9a31"
                     required
                     outlined
@@ -95,10 +95,10 @@
                     :disabled="$v.$anyError"
                     dark
                     >
-                    Pošalji
+                    {{$t('contact.button1')}}
                     </v-btn>
                     <v-btn @click="clear" color="#ba9a31">
-                    Očisti polja
+                    {{$t('contact.button2')}}
                     </v-btn>
                 </form>
             </v-container>
@@ -125,23 +125,23 @@ export default {
       info:[
         {
           icon: 'place',
-          title: 'Sedište',
-          subtitle: 'Beogradski put 29, \n11300 Smederevo, Srbija',
+          title: 'info1',
+          subtitle: 'address1',
         },
         {
           icon: 'place',
-          title: 'Kancelarija',
-          subtitle: 'Ante Protića 2, \n11300 Smederevo, Srbija',
+          title: 'info2',
+          subtitle: 'address2',
         },
         {
           icon: 'call',
-          title: 'Kontakt podaci',
-          subtitle: 'E-pošta: info@deltagraf.rs\n Telefon: 026/611-456',
+          title: 'info3',
+          subtitle: 'address3',
         },
         {
           icon: 'schedule',
-          title: 'Radno vreme',
-          subtitle: ' Pon-Sub\n 07:30-15:30',
+          title: 'info4',
+          subtitle: 'address4',
         }
       ],
     }),
@@ -160,30 +160,31 @@ export default {
       firstNameErrors () {
         const errors = []
         if (!this.$v.firstName.$dirty) return errors
-        !this.$v.firstName.required && errors.push('Polje Ime je obavezno.')
-        !this.$v.firstName.minLength && errors.push('Ime mora imati više od 3 slova')
+        console.log(this.$t('contact.title'))
+        !this.$v.firstName.required && errors.push(this.$t('contact.fNameError1'))
+        !this.$v.firstName.minLength && errors.push(this.$t('contact.fNameError2'))
         return errors
       },
       lastNameErrors () {
         const errors = []
         if (!this.$v.lastName.$dirty) return errors
-        !this.$v.lastName.required && errors.push('Polje Prezime je obavezno.')
-        !this.$v.lastName.minLength && errors.push('Prezime mora imati više od 3 slova')
+        !this.$v.lastName.required && errors.push(this.$t('contact.lNameError1'))
+        !this.$v.lastName.minLength && errors.push(this.$t('contact.lNameError2'))
         return errors
       },
       phoneErrors () {
         const errors = []
         if (!this.$v.phone.$dirty) return errors
-        !this.$v.phone.numeric && errors.push('Nepravilno unet broj')
-        !this.$v.phone.required && errors.push('Polje Broj telefona je obavezno.')
-        !this.$v.phone.minLength && errors.push('Broj mora sadržati minimum 9 cifara')
+        !this.$v.phone.numeric && errors.push(this.$t('contact.phoneError1'))
+        !this.$v.phone.required && errors.push(this.$t('contact.phoneError2'))
+        !this.$v.phone.minLength && errors.push(this.$t('contact.phoneError3'))
         return errors
       },
       emailErrors () {
         const errors = []
         if (!this.$v.email.$dirty) return errors
-        !this.$v.email.email && errors.push('Nepravilno uneta E-pošta')
-        !this.$v.email.required && errors.push('Polje E-pošta je obavezno')
+        !this.$v.email.email && errors.push(this.$t('contact.emailError1'))
+        !this.$v.email.required && errors.push(this.$t('contact.emailError2'))
         return errors
       },
     },
@@ -196,12 +197,13 @@ export default {
         this.form.push(this.email)
         this.form.push(this.phone)
         this.form.push(this.desc)
+        var querystring = require('querystring');
 
-        console.log(this.form[0])
         this.axios.post(
-              "http://localhost/dist/about.php",
+              "https://deltagraf.rs/about.php",
               querystring.stringify(this.form)
           )
+          alert(this.$t('contact.alert'))
         this.clear()
       },
       clear () {
@@ -227,6 +229,10 @@ addEventListener("load", function() {
     overflow-x:hidden;
     overflow-y:hidden;
 }
+.contact-header{
+  margin-left:10rem;
+  margin-right:20rem;
+}
 .map{
     background-color:white;
     z-index:0;
@@ -247,9 +253,13 @@ addEventListener("load", function() {
   border-top-right-radius:5px;
   position:relative;
   margin-top:-200px;
-  width:850px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 600px) {
+  .input-container{
+    width: 35rem;
+  }
 }
 }
 .sub-pre{
