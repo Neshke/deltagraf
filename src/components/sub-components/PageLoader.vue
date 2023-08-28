@@ -44,7 +44,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    border: 3px solid #da996f;
+    border: 3px solid #ba9a31;
     animation: spin 5s infinite linear;
 }
 @keyframes spin {

@@ -1,23 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Site from '../views/Site.vue'
+import Welcome from '../views/Welcome.vue'
+import i18n from '../i18n'
+import VueI18n from 'vue-i18n'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Site',
-    component: Site
+    redirect: `/${i18n.locale}/site`
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/rs',
+    redirect: `/rs/site`
+  },
+  {
+    path: '/:lang',
+    component: { render (c) { return c('router-view') }
+    },
+    children:[
+      {
+        path:'site',
+        name:'site',
+        component: Site
+      },
+    ]
+  },
 ]
 
 const router = new VueRouter({

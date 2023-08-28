@@ -1,0 +1,64 @@
+{
+    "nav": {
+      "title1": "POČETNA",
+      "title2": "PONUDA",
+      "title3": "O NAMA",
+      "title4": "REFERENCE",
+      "title5": "KONTAKT"
+    },
+    "home": {
+      "title": "Dobrodošli",
+      "content1": "Dobrodošli na Deltagraf d.o.o. veb portal. Kod nas možete pronaći sve od kancelariskog materijala i sredstava za higijenu koji su potrebni vašoj kompaniji. Možete poručivati robu telefonom, e-mailom ili doći lično u naše prostorije, mi ćemo vam uvek izaći u susret. U ponudi imamo preko 5.000 artikala i sigurni smo da imamo sve što vam je potrebno.",
+      "content2": "Nemate vremena ili niste blizu, pozovite nas mi ćemo naći način da roba dođe do vas.",
+      "content3": "Uskoro...",
+      "content4": "...Godina poslovanja",
+      "content5": "...Sa preko... ",
+      "content6": "...Zadovoljnih klijenata...",
+      "content7": "Kancelarijski materijal",
+      "content8": "Imamo kompletnu ponudu kancelarijskog materijala, školskog pribora, reklamnog i promo materijala sa uslugom štampe.",
+      "content9": "Proizvodi za održavanje higijene",
+      "content10": "Imamo veliki izbor kućnih i industrijskih sredtava za održavanje higijene kako domaće tako i strane proizvodnje. U našoj ponudi možete pronaći i kompletnu ponudu papirne galanterije."
+    },
+    "offers":{
+      "title": "Ponuda"
+    },
+    "about":{
+      "title": "O nama",
+      "content": "Deltagraf je osnovan 1992. godine sa jasnom vizijom osnivača Vladana Nikolića da je samo kvalitetna ponuda i vrhunska usluga garancija uspeha. Svoj rad smo započeli snabdevanjem poslovnih korisnika kancelarijskim materijalom a kasnije smo ponudu proširili i na hemijske proizvode za održavanje higijene . Za sve ove godine smo izgradili, pored renomea koji nosi samo ime naše kompanije, i poslovni prostor u centru Smedereva sa 100m2 kancelarijskog prostora i 300m2 magacinskog prostora. Naša težnja je da budemo vaši partneri a ne samo dobavljači, kao dokaz tome je i veliki broj kompanija koji godinama sarađuju sa nama. Stalnim ulaganjem u kadrove i proširenje kapaciteta činimo da kvalitet naše ponude i pružene usluge neprestano raste.",
+      "subtitle": "Sertifikati",
+      "button": "Zatvori"
+    },
+    "references":{
+      "title": "Reference"
+    },
+    "contact":{
+      "title": "Kontakt",
+      "info1": "Sedište",
+      "info2": "Kancelarija",
+      "info3": "Kontakt podaci",
+      "info4": "Radno vreme",
+      "address1": "Beogradski put 29, \n11300 Smederevo, Srbija",
+      "address2": "Ante Protića 2, \n11300 Smederevo, Srbija",
+      "address3": "E-pošta: info@deltagraf.rs\n Telefon: 026/611-456",
+      "address4": "Pon-Sub\n 07:30 AM - 15:30 PM",
+      "form": "Kontakt forma",
+      "formInfo": "Za sva Vaša pitanja u vezi naših proizvoda i poslovanja na raspolaganju vam stoji prodajni tim kompanije Deltagraf D.O.O. Na sva vaša pitanja odgovorićemo u najkraćem roku.",
+      "formFName": "Ime",
+      "fNameError1": "Polje ime je obavezno.",
+      "fNameError2": "Ime mora imati više od 3 slova.",
+      "formLName": "Prezime",
+      "lNameError1": "Last name is required.",
+      "lNameError2": "Must have more than 3 letters.",
+      "formEmail": "E-pošta",
+      "emailError1": "Nepravilno uneta E-pošta.",
+      "emailError2": "Polje E-pošta je obavezno.",
+      "formPhone": "Telefon",
+      "phoneError1": "Nepravilno unet broj.",
+      "phoneError2": "Polje Broj telefona je obavezno.",
+      "phoneError3": "Broj mora sadržati minimum 9 cifara.",
+      "formMessage": "Poruka",
+      "button1": "Pošalji",
+      "button2": "Očisti polja",
+      "alert": "Uspešno poslata poruka!"
+    }
+  }
