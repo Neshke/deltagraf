@@ -119,4 +119,14 @@ export default {
   border: 4px solid #ba9a31;
   height: 80vh;
 }
+@media screen and (min-width: 480px) {
+  #offers-div{
+  background-color:#010600;
+  height: 99vh;
+  }
+}
+.carousel{
+  border: 4px solid #ba9a31;
+  height: 80vh;
+}
 </style>

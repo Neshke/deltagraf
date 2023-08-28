@@ -9,13 +9,9 @@ import 'leaflet/dist/leaflet.css';
 import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import VueI18n from 'vue-i18n'
-import i18n from './i18n'
-
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
-Vue.use(VueI18n)
 
 router.beforeEach((to, from, next) => {
 
